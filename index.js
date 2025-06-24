@@ -11,7 +11,7 @@ const age = 35 // declaration keyword, variable name, equal sign, value
 const surname = " De Kerk " // combinations of chars
 const firstName = 'Vee is ' + 35
 const thisVariableUsesCamelCasing = true
-const BACKEND_URL = "keys" // rarely used
+const BACKEND_URL = "fhasdfyTTYUYU65667" // rarely used
 const ageAsString = `${age} is my age` // string literals, graves , backtick
 // allows you to combine strings and variables
 let isMale = true // true || false, boolean
@@ -50,7 +50,6 @@ isMale = false;
 // arrays: used to store multiple elements in one variable, uses the [] brackets
 // object: collection of key value pairs, where key is property, and value is the property value
 
-let courses = ["Computer Science", "Biological Science", "Information Technology", "Electrical Engineering"]
 let matrix = [
     [0, 1, 3],
     [4, 3, 4],
@@ -58,8 +57,8 @@ let matrix = [
 ]
 let numbers = [4, 5, 6, 7, 6, 7, 9, 10, 23, 12, 10, 2, 4, 3, 10] // sets are used to removing duplicates in arrays
 // index: start at 0, making the last element to be at index = courses.length - 1
-console.log(courses[0]);
-console.log(courses[courses.length - 1]);
+// console.log(courses[0]);
+// console.log(courses[courses.length - 1]);
 
 
 let csCourse = {
@@ -73,7 +72,6 @@ let csCourse = {
 }
 
 // console.log(csCourse)
-
 csCourse.courseName = "Information Technology"
 
 csCourse.modules.push("Statistics") // adding new elements, to the end of an array
@@ -87,17 +85,59 @@ delete csCourse.courseName
 
 // console.log(csCourse);
 
-let array = [
-    34,
-    "Vee",
-    {
-        name: "Vee",
-        surname: "Mnisi"
-    },
-    undefined,
-    [3, 5]
-]
-console.log(array);
+
+let courses = ["Computer Science", "Biological Science", "Information Technology", "Electrical Engineering"]
+
+
+
+// console.log(courses);
+courses[0] = ""
+const removedItems = courses.splice(0, 3) // rarely
+removedItems = ["Hi there"]
+removedItems.pop();
+console.log({ removedItems });
+
+// console.log({ removedEl: removedItems });
+courses[0] = "Family Law"
+console.log({ courses });
+courses.pop()
+delete courses[2]
+console.log({ courses });
+
+console.log('fl exists: ', courses.includes("Family Law"));
+
+
+// functions: reusable blocks of code that allow us to separate concerns, lines of code work
+// together to accomplish recommendably one specific task
+
+// function key word
+function getSum() {
+    const sum = 3 + 5
+    return sum
+}
+
+// arrow functions, ES5+ syntax
+const addNumbers = (a, b) => {
+    const sum = a + b
+    return sum
+}
+
+const consoleString = () => {
+    console.log('Hello World!!!')
+}
+
+// functions can return values to the calling code
+
+console.log(consoleString());
+consoleString()
+
+const sum = addNumbers(5, 9);
+const secondSum = addNumbers(90, 50);
+
+console.log(sum, secondSum);
+
+// high order functions: either return or accept another function as an argument or the return value
+// callback: function that is sent as an argument to another function
 
 
 
