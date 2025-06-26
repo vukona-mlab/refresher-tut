@@ -1,116 +1,14 @@
-// Javascript Object are KING
+import { Car } from "./Car.js";
+import { isMale } from "./variables.js";
+import { MyButton } from "./MyButton.js";
 
-//Objects are containers {
-//  Properties
-//  Methods = Functions stored as properties
-// }
+const myNewCar = new Car("Ford",1971);
 
-const person = {
-    firstName:"Mandla",
-    surname:"Mkhize",
-    age:32,
-    heightInMeters: 1.74,
-    greeting:  ()=>{
-        return "Sanibonani!";
-    }
-}
+document.getElementById("garage").innerHTML = myNewCar.age()
+alert (isMale)
 
-console.log("My name is: "+person.firstName);
+const newButton = new MyButton("blue","Register","10px","white")
+newButton.render();
 
-console.log(person.greeting());
-
-const zinhle = person; // this isnt a copy, you jusy created another on this object
-
-console.log("And my name is: "+zinhle.firstName);
-
-const robot1 = {
-    color:"Red",
-    action:"Stop!",
-    doAction: function (){
-        return this.action;
-    }
-}
-
-console.log(robot1.doAction())
-
-const robot2 = {
-    color:"Orange",
-    action:"Slow down",
-    doAction: function (){
-        return this.action;
-    }
-}
-
-const robot3 = {
-    color:"Green",
-    action:"Go!",
-    doAction: function (){
-        return this.action;
-    }
-}
-
-console.log(robot2.doAction());
-console.log(robot3.doAction());
-
-//Constructors
-
-function Robot(color,action){
-    this.color=color;
-    this.action=action;
-    this.doAction= function (){
-        return this.action;
-    }
-}
-
-const robot4 = new Robot("blue","Jump!");
-console.log(robot4.doAction());
-
-
-
-// create a constructor for book objects
-
-function Book(title, author,publishDate){
-    this.title = title;
-    this.author = author;
-    this.publishDate = publishDate;
-    this.getTitle = function (){
-        return this.title;
-    }
-    this.getAuthor = function (){
-        return this.author;
-    }
-    this.getPublishDate = function (){
-        return this.publishDate;
-    }
-}
-
-const book1 = new Book("My Life","Mondli Khoza","26 June 2025");
-const book2 = new Book("The Lion King","Mondli Khoza","26 June 2025");
-console.log(book1.getTitle());
-
-//Below the 'this' refers to the console and it does not have a doAction() property[method]
-//console.log(this.doAction())
-
-//Check what type of data type a method is returning typeof
-console.log(typeof book1.getTitle()) // string
-
-console.log(book1.getAuthor())
-
-
-//We can add to object literals with ease as below
-person.address = "123 Hola Street";
-
-console.log(person.address)
-
-
-book1.numOfPages = 432;
-console.log(book1.numOfPages)
-
-book1.setTitle = function (title){
-    this.title = title;
-}
-
-book1.setTitle("The Little Mermaid")
-console.log(book1.getTitle())
-
-document.getElementById("demo").innerHTML = book1.getTitle()
+const newButton2 = new MyButton("Green","Log In","10px","white")
+newButton.render();

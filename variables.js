@@ -14,7 +14,7 @@ const thisVariableUsesCamelCasing = true
 const BACKEND_URL = "keys" // rarely used
 const ageAsString = `${age} is my age` // string literals, graves , backtick
 // allows you to combine strings and variables
-let isMale = true // true || false, boolean
+export let isMale = true // true || false, boolean
 let isRich = null
 let unAssigned // // declaration keyword, variable name == undefined
 // console.log(isRich);
