@@ -5,7 +5,7 @@
 //  Methods = Functions stored as properties
 // }
 
-const person = {
+export const person = {
     firstName:"Mandla",
     surname:"Mkhize",
     age:32,
@@ -141,4 +141,4 @@ const mazda6 = new Car ("Mazda",2015);
 console.log(mazda6.name);
 console.log("It is "+mazda6.age()+" yrs old");
 
-document.getElementById("demo").innerHTML = JSON.stringify(book1);
+//document.getElementById("demo").innerHTML = JSON.stringify(book1);
